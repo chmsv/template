@@ -1,0 +1,14 @@
+# Node
+node_modules
+
+# Build
+dist
+
+# Env
+.env
+
+# Yarn
+yarn-error.log
+
+.DS_Store
+.git
