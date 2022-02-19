@@ -6,9 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": "yarn run watch:server & yarn run watch:client",
-    "watch:server": "nodemon server/server.js",
+    "watch:server": "nodemon start.js",
     "watch:client": "webpack serve --config webpack.dev.js",
-    "build": "NODE_ENV=production webpack --config webpack.prod.js --progress --profile"
+    "build": "NODE_ENV=production webpack --config webpack.prod.js --progress --profile",
+    "start": "NODE_ENV=production && node start.js",
+    "heroku-postbuild": "yarn run build"
   },
   "dependencies": {
     "cookie-parser": "^1.4.6",
